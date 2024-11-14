@@ -1,0 +1,6 @@
+google-generativeai
+redis
+fastapi
+uvicorn
+beautifulsoup4
+requests

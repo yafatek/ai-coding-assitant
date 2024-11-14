@@ -41,7 +41,7 @@ This project is a WebSocket-based chat application using **FastAPI** to provide 
    git clone https://github.com/yafatek/ai-coding-assitant.git
 ```
 ```bash
- cd websocket-coding-agent
+ cd ai-coding-assitant
 ```
 Install the required dependencies:
 ### Docker:
@@ -51,6 +51,9 @@ docker run -d -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
 ```
 ```bash
 pip install -r requirements.txt
+```
+```bash
+pip install 'uvicorn[standard]'   
 ```
 Configure environment variables, including the Gemini API key and Redis connection details.
 
