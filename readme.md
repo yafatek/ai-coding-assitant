@@ -44,6 +44,11 @@ This project is a WebSocket-based chat application using **FastAPI** to provide 
  cd websocket-coding-agent
 ```
 Install the required dependencies:
+### Docker:
+you need a Docker Desktop to run a Redis Instance
+```bash
+docker run -d -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+```
 ```bash
 pip install -r requirements.txt
 ```
