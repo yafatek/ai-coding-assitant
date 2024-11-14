@@ -38,7 +38,7 @@ This project is a WebSocket-based chat application using **FastAPI** to provide 
 
 1. Clone the repository:
 ```bash
-   git clone https://github.com/your-repo/websocket-coding-agent.git
+   git clone https://github.com/yafatek/ai-coding-assitant.git
 ```
 ```bash
  cd websocket-coding-agent
