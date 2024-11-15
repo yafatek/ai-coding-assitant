@@ -1,12 +1,16 @@
 import json
+import os
+
 import redis.asyncio as aioredis
 from typing import Any, Dict, List, Optional
 
 from memory.memory import AbstractMemory
 
+REDIS_HOST = os.environ.get('REDIS_HOST', 'redis://localhost')
+
 
 class RedisMemory(AbstractMemory):
-    def __init__(self, redis_url: str = "redis://localhost"):
+    def __init__(self, redis_url: str = REDIS_HOST):
         self.redis_url = redis_url
         self._redis: Optional[aioredis.Redis] = None
 
