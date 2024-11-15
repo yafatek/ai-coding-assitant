@@ -1,4 +1,5 @@
 import logging
+import os
 import time
 import uuid
 
@@ -40,7 +41,7 @@ async def websocket_endpoint(websocket: WebSocket):
             chats[chat_id]["messages"].append(user_message)
 
             # Generate AI response using Gemini
-            agent = CodingAgent(chat_id='chat_id', api_key="GEMINI_API_KEY")
+            agent = CodingAgent(chat_id='chat_id', api_key=os.environ.get('GEMINI_API_KEY'))
             code = await agent.generate_code(data)
             ai_message = {
                 "id": str(uuid.uuid4()),

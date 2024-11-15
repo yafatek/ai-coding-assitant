@@ -1,9 +1,11 @@
+import os
+
 import googleapiclient.discovery
 import requests
 from bs4 import BeautifulSoup
 
-search_engine_id = "google_search_engine_id"  # Google customer Search Engine id as cx
-api_key = "google_search_api_eky"  # Replace with your actual API key
+search_engine_id = os.environ.get('SEARCH_ENGIN_ID')
+api_key = os.environ.get('GOOGLE_SEARCH_API_KEY')
 
 
 def search_custom_engine(search_query: str):
